@@ -1,6 +1,11 @@
-module.exports = {
+// demo
+/* module.exports = {
   publicPath: '.',
-  // outputDir: 'demo',
+  outputDir: 'docs'
+}; */
+
+// dev
+module.exports = {
   configureWebpack: () => {
     if (process.env.NODE_ENV === 'production') {
       return {
