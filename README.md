@@ -55,6 +55,12 @@ export default {
 | openUrl    | 打开图片批注组件，传入图片 url             | url\|String: 图片地址               |
 | openBase64 | 打开图片批注组件，传入 base64 格式图片内容 | base64\|String: base64 格式图片内容 |
 
+注意：
+
+`openUrl` 内部使用 `fetch` 获取图片内容，获取后添加到 `canvas` 中。请注意跨域问题
+
+如果使用 `openUrl` 遇到问题，可以尝试自行获取图片内容，转成 `base64` 后通过 `openBase64` 方法打开组件
+
 ## Events
 
 | 事件名称 | 说明           | 回调参数                            |
