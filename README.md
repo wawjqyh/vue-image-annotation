@@ -2,11 +2,11 @@
 
 vue 图片批注组件
 
-![demo](docs/demo.gif)
+![demo](./demo.gif)
 
 ## 示例
 
-demo
+demo [https://wawjqyh.github.io/vue-image-annotation/](https://wawjqyh.github.io/vue-image-annotation/)
 
 ## 安装
 
