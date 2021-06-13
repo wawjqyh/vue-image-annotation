@@ -1,16 +1,30 @@
 {
   "name": "vue-image-annotation",
-  "version": "0.1.0",
-  "private": true,
+  "description": "add annotation to the picture",
+  "homepage": "https://github.com/wawjqyh/vue-image-annotation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wawjqyh/vue-image-annotation.git"
+  },
+  "version": "1.0.0",
+  "author": "Troy",
+  "license": "MIT",
+  "main": "dist/vue-image-annotation.js",
+  "keywords": [
+    "vue",
+    "image",
+    "picture",
+    "annotation",
+    "edit",
+    "draw"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "demo": "vue-cli-service serve",
+    "build-demo": "vue-cli-service build",
+    "build": "vue-cli-service build --target wc --name vue-image-annotation src/components/index.vue"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "fabric": "^4.5.0",
-    "vue": "^2.6.11"
+    "fabric": "^4.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -21,7 +35,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "less": "^4.1.1",
     "less-loader": "^7.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,

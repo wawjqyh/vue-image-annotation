@@ -15,11 +15,12 @@ export default {
 
   methods: {
     handleOpenDrawer() {
-      this.$refs.refImageDrawer.openUrl('./img.png');
+      this.$refs.refImageDrawer.openUrl('./img.jpeg');
     },
 
-    handleSave(base64) {
+    handleSave(base64, file) {
       console.log(base64);
+      console.log(file);
     }
   }
 };

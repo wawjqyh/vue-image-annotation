@@ -51,7 +51,7 @@ export default {
   },
 
   methods: {
-    async openUrl(url) {
+    initData() {
       this.size = null;
       this.curBrush = '';
       this.canvasScale = 1;
@@ -60,9 +60,24 @@ export default {
       this.$nextTick(() => {
         this.$refs.toolbar.initPosition();
       });
+    },
+
+    async openUrl(url) {
+      this.initData();
 
       const imgBlob = await getImg(url);
       const imgBase64 = await blobToBase64(imgBlob);
+      this.size = await getImgSize(imgBase64);
+      this.imgBase64 = imgBase64;
+
+      this.$nextTick(() => {
+        this.drawer = new Drawer(this.$refs.canvas, imgBase64);
+      });
+    },
+
+    async openBase64(imgBase64) {
+      this.initData();
+
       this.size = await getImgSize(imgBase64);
       this.imgBase64 = imgBase64;
 
