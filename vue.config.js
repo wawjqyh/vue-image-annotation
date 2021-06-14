@@ -6,6 +6,9 @@
 
 // dev
 module.exports = {
+  css: {
+    extract: false
+  },
   configureWebpack: () => {
     if (process.env.NODE_ENV === 'production') {
       return {
